@@ -6,7 +6,6 @@ model_name = st.selectbox(
      'Select a qa model',
      ('deepset/roberta-base-squad2', 'deepset/bert-base-uncased-squad2'))
 
-@st.cache(allow_output_mutation=True)
 def load_qa_model():
     model = pipeline('question-answering', model=model_name, tokenizer=model_name)
     return model
