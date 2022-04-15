@@ -4,7 +4,7 @@ from morpheus_hf.morpheus import MorpheusHuggingfaceNLI, MorpheusHuggingfaceQA, 
 
 model_name = st.selectbox(
      'Select a qa model',
-     ('deepset/roberta-base-squad2', 'deepset/bert-base-uncased-squad2'))
+     ('deepset/roberta-base-squad2', 'deepset/bert-base-cased-squad2'))
 
 def load_qa_model():
     model = pipeline('question-answering', model=model_name, tokenizer=model_name)
