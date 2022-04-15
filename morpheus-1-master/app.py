@@ -1,6 +1,6 @@
 import streamlit as st
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
-from morpheus import MorpheusHuggingfaceNLI, MorpheusHuggingfaceQA, MorpheusHuggingfaceSummarization
+from morpheus_hf.morpheus import MorpheusHuggingfaceNLI, MorpheusHuggingfaceQA, MorpheusHuggingfaceSummarization
 
 model_name = "deepset/roberta-base-squad2"
 
