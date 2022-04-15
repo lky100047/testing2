@@ -26,7 +26,7 @@ with st.spinner("Discovering Answers.."):
         
         test_morph_qa = MorpheusHuggingfaceQA(model_name)
         context = sentence
-        q_dict = {"question": question , "id": "56ddde6b9a695914005b9628", "answers": [{"text": result['answer'], "answer_start": 159}], "is_impossible": False}
+        q_dict = {"question": question , "id": "56ddde6b9a695914005b9628", "answers": [{"text": result['answer'], "answer_start": result['start']}], "is_impossible": False}
 
         text = test_morph_qa.morph(q_dict, context)
         st.write(text[0])
